@@ -505,7 +505,7 @@ html,body,.main{
     top: 5.4rem;
 }
 .work3{
-    width: 2.6rem;
+    width: 3.6rem;
     font-size: 0.3rem;
     border-bottom: 0.01rem solid #e1e1e1 ;
     padding: 0.1rem;
@@ -885,6 +885,42 @@ html,body,.main{
 
      }
  }
+.music{
+    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    z-index: 111;
+    background: url(../audio/music.svg) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+.musicMove{
+    -webkit-animation:move 1s infinite linear both;
+    animation:move 1s infinite linear both;
+}
+
+@-webkit-keyframes move {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes move {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
 
 

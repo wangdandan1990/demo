@@ -18,7 +18,7 @@
 <body>
 <section class="main">
     <section class="music">
-        <audio src="" preload="none" id="beyond"></audio>
+        <audio src="audio/Palmtree.mp3" preload="none" id="Palmtree"></audio>
 
     </section>
     <div class="swiper-container">
@@ -99,12 +99,12 @@
                 <div class="work"></div>
                 <div class="work1"></div>
                 <div class="work1 work2"></div>
-                <div class="work3">xxxxxxx公司</div>
-                <div class="work4">前端</div>
-                <div class="work3 w3">xxxxxxx公司</div>
-                <div class="work4 w4">前端</div>
+                <div class="work3">北京校咖网络有限公司</div>
+                <div class="work4">前端开发工程师</div>
+                <!--<div class="work3 w3">xxxxxxx公司</div>-->
+                <!--<div class="work4 w4">前端</div>-->
                 <div class="long">2016/1至2017/3</div>
-                <div class="long long2">2016/1至2017/3</div>
+                <!--<div class="long long2">2016/1至2017/3</div>-->
 
 
                 <div class="dl"></div>
@@ -165,4 +165,24 @@
 
 
     })
+    var music = document.querySelector(".music");
+    var Palmtree = document.querySelector("#Palmtree");
+    window.setTimeout(function(){
+        Palmtree.play();
+        music.style.opacity = 1;
+        music.className = "music musicMove";
+    },1000)
+    /*音频文件播放 play() 停止 pause()
+     * 怎样判断音频文件是播放还是停止的beyond.paused true->停止 false->播放
+     * */
+    music.addEventListener("click",function(){
+        if(Palmtree.paused){
+            Palmtree.play();
+            music.className = "music musicMove";
+        }else{
+            Palmtree.pause();
+            music.className = "music";
+        }
+    },false)
+
 </script>
